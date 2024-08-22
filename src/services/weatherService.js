@@ -1,7 +1,7 @@
 
 export const fetchWeather = async (city) => {
   const apiKey = "09189ee669c84cd1b3284012241408";
-  const url = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=2`;
+  const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=2`;
 
   try {
     const response = await fetch(url);
@@ -24,7 +24,7 @@ export const fetchCitySuggestions = async (query) => {
     return
   }
   const apiKey = process.env.REACT_APP_API_KEY;
-  const url = `http://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${query}`;
+  const url = `https://api.weatherapi.com/v1/search.json?key=${apiKey}&q=${query}`;
 
   try {
     const response = await fetch(url);
